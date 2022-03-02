@@ -7,3 +7,4 @@ x64
 Debug
 /1.HelloWorld
 *.ini
+!desktop.ini

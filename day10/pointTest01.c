@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
+// char* ch 与 char ch[] 的区别
+
 #include<stdio.h>
 #include<string.h>
 

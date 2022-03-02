@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
+//指针数组和数组指针的区别
+
 #include<stdio.h>
 #include<string.h>
 

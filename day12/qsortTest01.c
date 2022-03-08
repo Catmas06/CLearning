@@ -31,8 +31,10 @@ int cmp_name(const void* p1, const void* p2) {
 	return strcmp(((struct Stu*)p1)->name, ((struct Stu*)p1)->name);
 }
 
+/*
 int main() {
 	struct Stu s[3] = {"张三",20,"李四",21,"王五",19};
 	qsort(s, sizeof(s) / sizeof(s[0]), sizeof(s[0]), cmp_name);
 	return 0;
 }
+*/

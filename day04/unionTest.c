@@ -10,12 +10,11 @@ int check_sys()
 {
     union temp
     {
-        char a;
+        char c;
         int i;
-    };
-    union temp u;
+    } u;
     u.i = 1;
-    return u.a;
+    return u.c;
 }
 
 union Un
@@ -33,6 +32,6 @@ int main()
     printf("u   -->%p\n", &u);
     printf("u.c -->%p\n", &u.c);
     printf("u.i -->%p\n", &u.i);
-    printf("当前是否为小端存储，是为1，否则0    -->%d\n", check_sys);
+    printf("当前是否为小端存储，是为1，否则0    -->%d\n", check_sys());
     return 0;
 }

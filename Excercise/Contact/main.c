@@ -4,9 +4,10 @@ int main()
 {
     int input;
     // Contact *contact = malloc(sizeof(Contact));
+    // initContact(contact);
     Contact con;
     initContact(&con);
-    char inputName[DEFAULT_SIZE];
+    char inputName[DEFAULT_NAME_SIZE];
     do
     {
         printf("***********************************\n");
@@ -21,20 +22,31 @@ int main()
         {
         case ADD:
             contactAdd(&con);
+            // ontactAdd(contact);
             break;
         case DELETE:
+            printf("请输入要删除的联系人姓名：\n");
+            scanf("%s", inputName);
+            contactDelete(&con, inputName);
+            // contactDelete(contact, inputName);
             break;
         case MODIFY:
+            printf("请输入要更改的联系人姓名：\n");
+            scanf("%s", inputName);
+            contactModify(&con, inputName);
             break;
         case SEARCH:
             printf("请输入要查找的联系人姓名：\n");
             scanf("%s", inputName);
             contactSearch(&con, inputName);
+            // contactSearch(contact, inputName);
             break;
         case PRINT:
             printContact(&con);
+            // printContact(contact);
             break;
         case SORT:
+            sortByName(&con);
             break;
         case EXIT:
             break;

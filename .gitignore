@@ -9,3 +9,4 @@ Debug
 *.ini
 !desktop.ini
 *.out
+*.dat

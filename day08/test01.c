@@ -66,16 +66,17 @@ int main() {
 		ch[i] = -1 - a;
 		a++;
 	}
-	printf("字符组长度为%d\n", strlen(ch));
-	printf("char a=127+1 =%d", a);
+	printf("字符组长度为%zu\n", strlen(ch));
+	printf("char a=127+1 =%d\n", a);
 
 	a = 255;
-	b = -513;
-	c = 511;
-	if (b == c) {
-		printf("==\n");
+	b = -513;	//有符号char 1111 1111
+	c = 511;	//无符号char 1111 1111
+	printf("(unsigned char)b = %u\n unsigned char c = %u\n",(unsigned char)b,c);
+	if (b != c) {	//先转化为int，再进行判断，虽然机器数相等，含义不同，转化为int后也不相同
+		printf("(signed char)b!=(unsigned char)c\n");
 	}
-	(char)c = -513;
+	c = -513;
 	a++;
 	return 0;
 }

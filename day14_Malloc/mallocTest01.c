@@ -24,6 +24,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -39,7 +40,7 @@ int main()
         p[i] = i;
         i++;
     }
-    for (i = 0; i < 500; i++)
+    for (i = 0; i < 100; i++)
     {
         printf("p[%d] = %d\n", i, p[i]);
     }
@@ -52,16 +53,16 @@ int main()
 }
 
 //--------------------经典错误-------------------
+// GetMemory()中的 p 是 Test()中 str 的一个副本，出了作用域即清除，未对str做任何修改
 
 // void GetMemory(char *p)
 // {
 //     p = (char *)malloc(100);
 // }
-// #include <string.h>
 // void Test(void)
 // {
 //     char *str = NULL;
-//     GetMemory(str);
+//     GetMemory(&(str));
 //     strcpy(str, "hello world");
 //     printf(str);
 // }

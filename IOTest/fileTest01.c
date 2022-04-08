@@ -15,6 +15,7 @@
             char * fgets ( char * str, int num, FILE * stream );
                 可以向 stream 传入 stdin
                 num: Maximum number of characters to be copied into str (including the terminating null-character).
+                文件正常读取结束后会返回空指针
 
         - 写文件
             int fputs ( const char * str, FILE * stream );
@@ -37,6 +38,9 @@
             size_t fread ( void * ptr, size_t size, size_t count, FILE * stream );
                 返回实际读取的count个数，可以指定读5个，若只读入3个，则返回3
                 若返回值小于count，则读取完成
+
+        - 判断读取结束的原因。正常结束返回1
+            int feof ( FILE * stream );
 
     流
         在程序和外部设备建抽象出来的一个层级，程序直接与流交互，流再与外部设备交互。只用关心程序和流之间的交互
